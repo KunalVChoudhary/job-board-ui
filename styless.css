@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f5f7fa;
+    color: #333;
+}
+
+  /* Navbar */
+nav {
+    background-color: #2c3e50;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    height: 70px;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar> div{
+    display: none;
+}
+
+.company-logo{
+    display: flex !important;
+    height: 100%;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.navbar-content-toggler {
+    display: none;
+    cursor: pointer;
+    padding: 20px;
+}
+
+.navbar-content{
+    display: none;
+    position: absolute; 
+    top: 70px;           
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+#content-toggle:checked + .navbar-content {
+    display: block !important;
+}
+
+@media (min-width:700px){
+    .navbar-content{
+        display: block !important;
+    }
+    .navbar-content>ul{
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+    .navbar-content>ul>li{
+        display: flex;
+        align-items: center;
+        width: auto;
+        height: 100%; 
+        padding: 10px 20px;
+        overflow: hidden;
+    }
+    
+    .navbar-content>ul>li:hover{
+        border:solid 1.5px #000000
+    }
+
+}
+
+@media (max-width:700px){
+    .navbar-content-toggler {
+        display: flex !important;
+        align-items: center;
+        height: 70px;
+        background-color: #2c3e50;
+        color: white;
+    }
+
+    .navbar-content-mobile {
+    transition: all 0.3s ease;
+    }
+
+    .navbar-content>ul {
+        flex-direction: column;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        background-color: rgb(196, 194, 192);
+    }
+
+    .navbar-content>ul>li {
+        padding: 10px 20px;
+        border-bottom: 1px solid #2c3e50;
+    }
+}
