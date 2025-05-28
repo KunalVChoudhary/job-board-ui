@@ -40,20 +40,12 @@ nav {
     padding: 20px;
 }
 
-.navbar-content{
-    display: none;
-    position: absolute; 
-    top: 70px;           
-    left: 0;
-    width: 100%;
-    z-index: 999;
-}
 
 #content-toggle:checked + .navbar-content {
     display: block !important;
 }
 
-@media (min-width:700px){
+@media (min-width:800px){
     .navbar-content{
         display: block !important;
     }
@@ -80,7 +72,7 @@ nav {
 
 }
 
-@media (max-width:700px){
+@media (max-width:800px){
     .navbar-content-toggler {
         display: flex !important;
         align-items: center;
@@ -89,8 +81,14 @@ nav {
         color: white;
     }
 
-    .navbar-content-mobile {
-    transition: all 0.3s ease;
+    .navbar-content{
+        display: none;
+        position: absolute; 
+        top: 70px;           
+        left: 0;
+        width: 100%;
+        z-index: 999;
+        transition: all 0.3s ease;
     }
 
     .navbar-content>ul {
@@ -106,3 +104,101 @@ nav {
         border-bottom: 1px solid #2c3e50;
     }
 }
+
+
+.main-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.section-1 {
+    flex: 1 1 250px;
+    min-width: 150px;
+}
+
+.section-2 {
+    flex: 3 1 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media (max-width: 800px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .section-1{
+        display: none !important;
+    }
+    .section-2 {
+        flex: 1 1 100%;
+    }
+
+}
+
+.search-container input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-container input:focus{
+    border: 1px solid #fcbb5a;
+}
+
+.filter-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.filter-heading {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #2c3e50;
+    border-bottom: 2px solid #2c3e50;
+    padding-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.filter-dropdown {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.filter-dropdown summary {
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.filter-dropdown input[type="text"],
+.filter-dropdown input[type="number"] {
+  width: 100%;
+  padding: 6px;
+  margin-top: 5px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+
+.apply-filter-btn {
+  padding: 10px;
+  background-color: #2c3e50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
