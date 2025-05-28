@@ -65,7 +65,48 @@
             <div class="section-2">
                 <div class="search-container">
                     <input type="text" placeholder="Search jobs..." />
-                </div>
+                    
+                    <label for="filter-toggle" class="toggle-filter-btn">Filters</label>
+                    
+                    <input type="checkbox" id="filter-toggle" hidden>
+
+                    <div class="filter-section-mobile">
+                        <div class="filter-heading">FILTERS</div>
+                        
+                        <details class="filter-dropdown">
+                            <summary>Keyword</summary>
+                            <input type="text" placeholder="Enter keyword..." />
+                        </details>
+                        
+                        <details class="filter-dropdown">
+                            <summary>Experience</summary>
+                            <input type="number" placeholder="Years of experience" min="0" />
+                        </details>
+
+                        <details class="filter-dropdown">
+                            <summary>Work Mode</summary>
+                            <label><input type="checkbox" value="Remote" /> Remote</label><br />
+                            <label><input type="checkbox" value="Hybrid" /> Hybrid</label><br />
+                            <label><input type="checkbox" value="Onsite" /> Onsite</label>
+                        </details>
+
+                        <details class="filter-dropdown">
+                            <summary>Job Type</summary>
+                            <label><input type="checkbox" value="Full-time" /> Full-time</label><br />
+                            <label><input type="checkbox" value="Part-time" /> Part-time</label><br />
+                            <label><input type="checkbox" value="Internship" /> Internship</label><br />
+                            <label><input type="checkbox" value="Contract" /> Contract</label>
+                        </details>
+
+                        <details class="filter-dropdown">
+                            <summary>Select Location</summary>
+                            <input type="text" placeholder="Enter location..." />
+                        </details>
+
+                        <button class="apply-filter-btn">Apply Filter</button>
+                    </div> 
+                </div>               
+
                 <div class="job-card-container"></div>
                 <div class="pagination"></div>
             </div>
